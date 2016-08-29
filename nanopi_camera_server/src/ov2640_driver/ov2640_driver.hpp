@@ -7,9 +7,11 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <time.h>
+#include <wiringPi.h>
 #include <wiringPiSPI.h>
 #include <unistd.h>
 #include "arducam.h"
+
 #define OV2640_CHIPID_HIGH  0x0A
 #define OV2640_CHIPID_LOW   0x0B
 
@@ -102,6 +104,6 @@ public:
         arducam_clear_fifo_flag(CAM1_CS);
     }
 
-}
+};
 
 #endif

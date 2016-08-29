@@ -27,7 +27,7 @@ public:
     ImagePublisher(std::string publisher_topic, ros::NodeHandle *nh) : ov2640_driver(){
         this->nh = nh;
 
-        it = new image_transport::ImageTransport(nh);
+        it = new image_transport::ImageTransport(*nh);
         pub_img = it->advertise(publisher_topic, 1);
 
         header.seq = 0;
